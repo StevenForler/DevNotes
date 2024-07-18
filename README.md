@@ -1,2 +1,3 @@
-# DevNotes
- my well of information in regards to programming tips tricks, Logs and code references
+# WELCOME!
+
+Thanks for checking out my Github this will all be changing soon as I add more projects. 
