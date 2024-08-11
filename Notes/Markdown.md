@@ -69,3 +69,5 @@ This is a link here [Google](https://udm14.com/) <!-- surround the word you want
 Here's how to do a an image
 
 ![alt text](https://www.lib.uchicago.edu/efts/ARTFL/projects/mckee/Images/gavarni-reduced2.jpg)
+
+Here's some additional [info](https://stackoverflow.com/questions/34341808/is-there-a-way-to-add-an-animated-gif-to-a-markdown-file) about how to add a gif to markdown.
