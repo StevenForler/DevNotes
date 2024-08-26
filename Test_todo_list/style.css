@@ -1,0 +1,25 @@
+* { /*spacing clear*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item-description {
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 10px;
+
+}
+
+.item-completed:checked + .item-description { /* the "+" allows you to target a sibling that immediately follows it. The sibling element must share the same parent element*/
+    background: #dddddd;
+    text-decoration: line-through;
+}
+
+#add {
+    padding: 8px 14px;
+    font-weight: bold;
+    color: white;
+    background: purple;
+    cursor: pointer;
+}
