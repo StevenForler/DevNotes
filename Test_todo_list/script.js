@@ -22,6 +22,19 @@ function addItem() {
         completed: false
     });
 
+    setItems(items);
+    refreshList(); // render the list of items for the user
+}
+
+function refreshList() {
+    //TODO: sort items
+
+    items_containers.innerHTML = "";
+
+    for (const item of items) {
+        const itemElement = item_template.content.cloneNode(true); // were taking the template element on line 13 of index.html, then were getting the content from that template, then make a clone of that template. now we can interact with that div using standard DOM methods
+        
+    }
 }
 console.log(items);
 // getItems();
