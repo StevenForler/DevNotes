@@ -1,8 +1,8 @@
-* { /*spacing clear*/
+/* * { spacing clear
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 .item-description {
     padding: 5px;
