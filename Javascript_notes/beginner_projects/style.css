@@ -1,0 +1,25 @@
+#green {
+    background-color: green;
+    color: white;
+}
+
+#red {
+    background-color: rgb(189, 0, 0);
+    color: white;
+}
+
+#blue {
+    background-color: blue;
+    color: white;
+}
+
+#random {
+    background-color: #e7d1ff;
+}
+
+button {
+    border-radius: 10px;
+    width: 75px;
+    height: 25px;
+    margin: 5px;
+}
