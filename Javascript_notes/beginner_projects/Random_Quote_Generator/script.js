@@ -15,5 +15,25 @@ const usedIndexes = new Set() // to keep track of used quotes. to help not repea
 const quoteElement = document.getElementById("quote")
 
 function generateQuote() {
-    quoteElement.innerHTML = "hello world" //innerHTML is referring to inbetween the tags that you're 
+    if (usedIndexes.size >= quotes.length) {
+    //for Set you use size for an array you use length
+    usedIndexes.clear()
+    }
+
+    while(true) {
+        const randomIdx = Math.floor(Math.random() * quotes.length)
+
+        if(usedIndexes.has(randomIdx)) continue // this is to check if we've used a quote before. if hasn't been used continue.
+
+        const quote = quotes[randomIdx]
+        quoteElement.innerHTML = quote;
+        usedIndexes.add(randomIdx)
+        break // this will end the while loop
+    }
+     
+    //math.random() helps generate a number between 0 and 1
+    //math.floor() rounds down to the nearest number whole number
+    // and the reason for doing this is because the quotes.length will have and index beyond what we can access
+    //quotes.length this is to help count how many elements are inside of the "quotes"array
+    //quoteElement.innerHTML = "hello world" //innerHTML is referring to inbetween the tags that you're 
 }
