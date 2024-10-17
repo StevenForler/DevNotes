@@ -1,7 +1,7 @@
-let items = ["hello world", "123"];
+let items = [];
 
 const itemsDiv = document.getElementById("items")
-
+const input = document.getElementById("itemInput")
 function renderItems () { 
 // not efficient but we are starting with clearing the div to start fressh and re-write our items in it
     itemsDiv.innerHTML = null; // removing all the items from itemsDiv
@@ -13,6 +13,8 @@ function renderItems () {
         container.style.marginBottom = "10px" // adding a margin to keep the items clean
 
         const text = document.createElement("p") //createElement creates an element on the DOM(the website interface)
+        text.style.display = "inline" // every element in HTML is either a block or inline element. Block Elements: will create a row for themselves and move any added elements to the next row. Inline Elements: where added elements like a button will stay next to the tag
+        text.style.marginRight = "10px"
         text.textContent = item; // both line 15 and 16 creates a paragraph tag
 
         const button = document.createElement("button")
@@ -26,13 +28,25 @@ function renderItems () {
     }
 }
 
-renderItems()
-
 function loadItems () {}
 
 function saveitems () {}
 
-function addItem () {}
+function addItem() {
+    const value = input.value;
 
-function removeItem (idx) {}
+    if (!value) {
+        alert("don\'t leave the box empty")
+        return
+    }
+
+    items.push(value)
+    renderItems()
+    input.value = ""
+}
+
+function removeItem (idx) {
+    items.splice(idx, 1)
+    renderItems()
+}
 
