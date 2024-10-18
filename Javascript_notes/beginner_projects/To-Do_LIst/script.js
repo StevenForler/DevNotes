@@ -2,6 +2,8 @@ let items = [];
 
 const itemsDiv = document.getElementById("items")
 const input = document.getElementById("itemInput")
+const storageKey = "items";
+
 function renderItems () { 
 // not efficient but we are starting with clearing the div to start fressh and re-write our items in it
     itemsDiv.innerHTML = null; // removing all the items from itemsDiv
@@ -28,9 +30,17 @@ function renderItems () {
     }
 }
 
-function loadItems () {}
+function loadItems () {
+    const oldItems = localStorage.getItem(storageKey)
+    if (oldItems) items = JSON.parse(oldItems)
+    renderItems()
+}
 
-function saveitems () {}
+function saveitems () {
+    // to store a list/array locally you have to convert it to a string. this isn't the only thing that can be stored but there are some things that can be accessed.
+    const stringItems = JSON.stringify(items); // stringify helps convert whatever variable that you have as a string data type
+    localStorage.setItem(storageKey, stringItems)
+}
 
 function addItem() {
     const value = input.value;
@@ -43,10 +53,13 @@ function addItem() {
     items.push(value)
     renderItems()
     input.value = ""
+    saveitems()
 }
 
 function removeItem (idx) {
     items.splice(idx, 1)
     renderItems()
+    saveitems()
 }
 
+document.addEventListener("DOMContentLoaded",loadItems)
