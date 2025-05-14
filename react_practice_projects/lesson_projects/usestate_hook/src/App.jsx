@@ -3,7 +3,9 @@
 
 // useState: A react hook that allows the creation of a stateful variable
 //           AND a setter function to update tis value in the Virtual DOM. [name(variable), setName(setter function)]
-import Counter from './Counter.jsx'
+// import Counter from './Counter.jsx'
+import MyComponent from './MyComponent.jsx'
+
 
 
 function App() {
@@ -11,7 +13,8 @@ function App() {
 
   return (
     <>
-      <Counter />
+      {/* <Counter /> */}
+      <MyComponent/>
     </>
   )
 }

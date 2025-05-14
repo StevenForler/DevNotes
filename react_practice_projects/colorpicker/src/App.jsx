@@ -1,11 +1,11 @@
-import Button from './Button.jsx'
+import Colors from './Colors.jsx'
 
 
 function App() {
 
   return (
     <>
-     <Button/>
+     <Colors />
     </>
   )
 }

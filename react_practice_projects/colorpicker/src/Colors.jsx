@@ -1,17 +1,24 @@
 import react, { useState } from "react";
 
-function button (){
-    const [favorite,setFavorite]=useState(false)
-    const [stats,setStats]=useState(false)  
+function color (){
+    const [color,setColor]=useState("#FFFFFF") //✔
+
+    const inputColor = (event) =>{
+        setColor(event.target.value)
+    } //✔
 
 
-    return(
-    <div>
-        <button>Red</button> 
-        <button>Green</button> 
-        <button>Blue</button> 
-        <button>Random</button> 
+    return( 
+    <>
+    <div className="color-container">
+        {/* add title of app */}
+    <div className="color-location" /*style={}*/ >
+         <p>color input: {color}</p>
     </div>
+        {/* ad a label */}
+        <input value={color} onChange={inputColor} placeholder="insert hexcode here..." /> ✔
+    </div>
+    </>
     );
 }
 
