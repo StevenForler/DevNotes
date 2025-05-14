@@ -1,28 +1,28 @@
 import react, { useState } from "react";
 
 function color (){
-    const [color,setColor]=useState("#FFFFFF") //✔
+    const [color,setColor]=useState("#9F2B68")
 
     const inputColor = (event) =>{
         setColor(event.target.value)
-    } //✔
+    }
 
 
     return( 
     <>
     <div className="color-container">
         {/* add title of app */}
-    <div className="color-location" /*style={}*/ >
+    <div className="color-location" style={{backgroundColor: color}} >
          <p>color input: {color}</p>
     </div>
         {/* ad a label */}
-        <input value={color} onChange={inputColor} placeholder="insert hexcode here..." /> ✔
+        <input value={color} onChange={inputColor} placeholder="insert hexcode here..." />
     </div>
     </>
     );
 }
 
-export default button
+export default color
 
 // notes for next session reference usestate hooks project. make a separate div that the buttons can target.
 
