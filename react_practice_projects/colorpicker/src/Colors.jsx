@@ -1,4 +1,14 @@
 import react, { useState } from "react";
+// import Colornames from "./Colornames.jsx"
+
+// integrate this to allow names convert to hex the input field
+// function nameHexConvert(Colornames){
+//     <Colornames/>
+//     if (typeof colours[colour.toLowerCase()] != 'undefined')
+//         return colours[colour.toLowerCase()];
+
+//     return false;
+// }
 
 function color (){
     const [color,setColor]=useState("#9F2B68")
@@ -6,7 +16,6 @@ function color (){
     const inputColor = (event) =>{
         setColor(event.target.value)
     }
-
 
     return( 
     <>
