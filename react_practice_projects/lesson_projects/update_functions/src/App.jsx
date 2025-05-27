@@ -1,15 +1,13 @@
-import Colors from './Colors.jsx'
-
+import counter from './counter.jsx'
 
 
 function App() {
-
+ 
   return (
     <>
-      <Colors/>
-      
+      <Counter/>
     </>
-  );
+  )
 }
 
 export default App

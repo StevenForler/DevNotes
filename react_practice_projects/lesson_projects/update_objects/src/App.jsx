@@ -1,15 +1,12 @@
-import Colors from './Colors.jsx'
-
-
+import MyComponent from "./MyComponent.jsx"
 
 function App() {
 
   return (
     <>
-      <Colors/>
-      
+    <MyComponent/>
     </>
-  );
+  )
 }
 
 export default App

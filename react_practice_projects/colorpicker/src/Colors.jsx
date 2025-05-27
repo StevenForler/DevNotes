@@ -1,31 +1,55 @@
 import react, { useState } from "react";
-// import Colornames from "./Colornames.jsx"
-
-// integrate this to allow names convert to hex the input field
-// function nameHexConvert(Colornames){
-//     <Colornames/>
-//     if (typeof colours[colour.toLowerCase()] != 'undefined')
-//         return colours[colour.toLowerCase()];
-
-//     return false;
-// }
 
 function color (){
-    const [color,setColor]=useState("#9F2B68")
-
+    const [color,setColor]=useState("")
+    const [hexCode, setHexCode]=useState("")
+    const [message, setMessage]=useState("")
     const inputColor = (event) =>{
-        setColor(event.target.value)
+        let colorHex = event.target.value
+        if(colorHex.match(/^#[0-9a-f]{6}$/i)){
+            colorHex += "ff"
+        }
+        colorHex = namedColorToHex(colorHex)
+        if(colorHex === null){
+            setHexCode("#FFFFFF")
+            setMessage("invalid HTML color")
+        }
+        else{
+            setHexCode(colorHex)
+            setMessage(colorHex.toUpperCase())
+        }
+        setColor(event.target.value)    
+    }
+    
+
+
+    const namedColorToHex = (colorname) => {
+        const context = document.createElement("canvas").getContext("2d");
+        context.fillStyle = colorname;
+        const hexcode = context.fillStyle.toLowerCase();
+
+        if (
+            (hexcode == colorname.toLowerCase()) ||
+            (
+            (colorname.toLowerCase() != "black") &&
+            (hexcode == "#000000")
+            )
+        ) {
+            return (null);
+        }
+        return (hexcode);
     }
 
     return( 
     <>
     <div className="color-container">
         {/* add title of app */}
-    <div className="color-location" style={{backgroundColor: color}} >
-         <p>color input: {color}</p>
+    <div className="color-location" style={{backgroundColor: hexCode}} >
+         <p>color input: {message}</p>
     </div>
         {/* ad a label */}
-        <input value={color} onChange={inputColor} placeholder="insert hexcode here..." />
+        <input value={color} onChange={inputColor} placeholder="insert color here..." />
+        <p>Please only use color name or hexcodes.</p>
     </div>
     </>
     );

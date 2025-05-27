@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 function MyComponent(){
 
-    const [name, setName] = useState("titties");
+    const [name, setName] = useState("");
     const [quantity, setQuantity] =useState(1);
     const [comment, setComment] = useState("");
     const [payment, setPayment] = useState("");
@@ -36,7 +36,7 @@ function MyComponent(){
                 <p>Quantity: {quantity} </p>
                 
                 <textarea value={comment} onChange={handleCommentChange}
-                placeholder='booty booty booty booty rockin everywhere'></textarea>
+                placeholder=''></textarea>
                 <p>Comment: {comment}</p>
 
                 <select value={payment} onChange={handlePaymentChange}>

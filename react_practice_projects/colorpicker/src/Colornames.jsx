@@ -1,5 +1,6 @@
 // to isolate all the color names and related hexcodes
 // https://stackoverflow.com/questions/1573053/javascript-function-to-convert-color-names-to-hex-codes
+// https://medium.com/@nechemetu/generating-random-hex-colors-in-react-3df1bf7feb3e - random gen hexcode
 
 let colors = {"aliceblue":"#f0f8ff","antiquewhite":"#faebd7","aqua":"#00ffff","aquamarine":"#7fffd4","azure":"#f0ffff",
     "beige":"#f5f5dc","bisque":"#ffe4c4","black":"#000000","blanchedalmond":"#ffebcd","blue":"#0000ff","blueviolet":"#8a2be2","brown":"#a52a2a","burlywood":"#deb887",
