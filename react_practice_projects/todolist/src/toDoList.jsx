@@ -33,3 +33,5 @@ function toDoList (){
         </div>
     )
 }
+
+export default toDoList
