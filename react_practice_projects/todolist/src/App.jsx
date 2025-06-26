@@ -1,11 +1,12 @@
-import toDoList from "./toDoList.jsx"
+import ToDoComponent from "./toDoList.jsx"
+
 
 function App() {
   
 
   return (
     <>
-      <toDoList/>
+    <ToDoComponent></ToDoComponent>
     </>
   )
 }
