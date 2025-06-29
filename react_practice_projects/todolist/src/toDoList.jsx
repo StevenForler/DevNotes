@@ -34,14 +34,19 @@ function ToDoComponent (){
 
     return(
         <div>
+            <h2>To Do list</h2>
             <ul>
                 {task.map((task, index) =>
                 <li key={index} onClick={() => handleRemoveTask(index)}> 
                     {task.date}
                 </li>)}
             </ul>
+            
+            <input type="text" value={taskDate} onChange={handleTaskDateChange}/><br/>
+            <input type="text" value={task} onChange={handleTaskChange} /><br/>
+            <button onClick={handleAddTask}></button>
         </div>
-    )
+    );
 }
 
 export default ToDoComponent
