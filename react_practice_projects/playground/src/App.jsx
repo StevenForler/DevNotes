@@ -3,7 +3,8 @@ import { home } from './Pages/Home'
 import { home } from './Pages/Page1'
 import { home } from './Pages/Page2'
 import { home } from './Pages/Page3'
-
+// to test the pages without navigation buttons put "/*" in front of the URL
+// example: 127.0.0.1:5173/*/Page1
 
 function App() {
 
