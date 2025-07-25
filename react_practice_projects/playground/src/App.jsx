@@ -1,8 +1,8 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import { home } from './Pages/Home'
-import { home } from './Pages/Page1'
-import { home } from './Pages/Page2'
-import { home } from './Pages/Page3'
+import { Home } from './Pages/Home'
+import { Page1 } from './Pages/Page1'
+import { Page2 } from './Pages/Page2'
+import { Page3 } from './Pages/Page3.jsx'
 // to test the pages without navigation buttons put "/*" in front of the URL
 // example: 127.0.0.1:5173/*/Page1
 
