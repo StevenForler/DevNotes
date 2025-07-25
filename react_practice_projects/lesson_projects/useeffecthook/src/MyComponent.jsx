@@ -9,9 +9,9 @@ import React, {useState, useEffect} from "react";
 // useEffect(function, [dependencies])
 
 // what dependencies are there:
-// 1. useEffect(() => {})        // Runs after every re-render
-// 2. useEffect(() => {}, [])    // Runs only on mount
-// 3.useEffect(() => {}, [value] // Runs on mount + when value changes
+// 1. useEffect(() => {})           // Runs after every re-render
+// 2. useEffect(() => {}, [])       // Runs only on mount
+// 3. useEffect(() => {}, [value]   // Runs on mount + when value changes
 
 // USES
 // #1.  Event Listeners
