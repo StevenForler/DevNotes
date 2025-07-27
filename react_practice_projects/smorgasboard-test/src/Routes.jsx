@@ -1,16 +1,23 @@
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { NotesPage } from './Pages/NotesPage'
-import { NoteDetailPage } from './Pages/NoteDetailPage.Jsx'
-import { NotFoundPage } from './Pages/NotFoundPage'
+import {HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from './Pages/home'
+import { Page1 } from './Pages/page1'
+import { Page2 } from './Pages/page2'
+import { Page3 } from './Pages/page3'
+import { Layout } from './Layout'
 
-export const Routes = () => {
-    return(
-        <Router>
-            <Switch>
-                <Route path="/"> <NotesPage/> </Route>
-                <Route path="/notes/:noteId"> <NoteDetailPage/> </Route>
-                <Route> <NotFoundPage/></Route>
-            </Switch>
-        </Router>
-    );
+
+export function Pageroutes(){
+
+  return (
+    <Router>
+      <Routes>
+        <Route element={<Layout/>}>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/page1" element={<Page1/>}/>
+        <Route path="/page2" element={<Page2/>}/>
+        <Route path="/page3" element={<Page3/>}/>
+        </Route>
+      </Routes>
+    </Router>
+  )
 }
