@@ -16,7 +16,9 @@ export function TodoList(props) {
 
     return (
         <>
-            {filterTodosList.map((todo, todoIndex) => {
+            {filterTodosList.map((todo, todoIndex) => { 
+                {/* replacing "todos.map" with "filterTodosList.map" for line 19 help map only the relevent items 
+                    while the filterToDoList variable on line 9 will remove all the irrelevent items */}  
                 const tempTodoIndex = todos.findIndex(val => val.input == todo.input)
                 console.log(tempTodoIndex)
                 {/*finding an index like this has it's limitations and in later courses we learn a more sophisticated way of doing it 
@@ -25,10 +27,11 @@ export function TodoList(props) {
                     <TodoCard // this is ready to pass the information to the TodoCard Components
                         key={todoIndex}
                         {...props}
-                        todoIndex={tempTodoIndex}
-                        todo={todo} />  // spread operators ex:{...props} must be at the end of a list of argument
-                                        // what ever the parent arugement is receiving also add them here at the end.
-                                        // you can replace the todo={todo}
+                        todoIndex={tempTodoIndex} //you could also remove this line as well if you didn't use the spread operator
+                        todo={todo} />  
+                        // spread operators ex:{...props} must be at the end of a list of argument. what ever the parent arugement is receiving,
+                        //                 also add them here at the end. If you didn't use spread operator which could make it a bit cleaner. To make it work, 
+                        //                 you would have to go to the TodoCard component on line 9 and change the destructure to be just {todo}
                 )
             })}
 
