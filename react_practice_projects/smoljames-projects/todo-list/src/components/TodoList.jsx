@@ -5,7 +5,7 @@ import { TodoCard } from "./TodoCard";
 export function TodoList(props) {
     const { todos, selectedTab } = props
     
-
+    //replacing the const tab that was here with "selectedTab" this functionally now only shows what each tab should hold. 
     const filterTodosList = selectedTab === 'All' ?
         todos : // if the selected tab is equal to all then you just count all the todos
         selectedTab === 'Completed' ?

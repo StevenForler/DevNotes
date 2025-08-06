@@ -22,12 +22,15 @@ export function Tabs(props) {
                     <button onClick={() => {
                         setSelectedTab(tab)
                     }} key={tabIndex}
-                        className={"tab-button " + (tab == selectedTab ? ' tab-selected' : ' ')}>
+                        className={"tab-button " + (tab == selectedTab ? ' tab-selected' : ' ')}> 
+                            {/*line 25: to append additional classes you must add a space in front of the current class name and surround the additional class in parentheses
+                                you can then add a conditional statement to allow for specific variables to receive a specific class. 
+                                in this case, intandem with the hr tag it shows with a highlight under the tab of which tab is selected */}
                         <h4>{tab} <span>({numOfTasks})</span></h4>
                     </button>
                 )
             })}
-            <hr />
+            <hr /> {/* hr = horizontal rule this just gives a horizontal line break*/} 
         </nav>
     )
 }

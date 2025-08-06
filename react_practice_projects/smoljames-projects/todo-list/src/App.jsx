@@ -16,7 +16,7 @@ function App() {
   const [todos, setTodos] = useState([
     { input: 'Hello! Add your first todo!', complete: true }
   ])
-  const [selectedTab, setSelectedTab] = useState('Open')
+  const [selectedTab, setSelectedTab] = useState('Open') // the quick and dirty explanation for usestate syntax is the value and setter function is basically array destructuring 
 
   function handleAddTodo(newTodo) {
     const newTodoList = [...todos, { input: newTodo, complete: false }]
@@ -48,6 +48,14 @@ function App() {
       return valIndex !== index
     })
     setTodos(newTodoList)
+    {/*since you can't modify the original list we have to override it. to do this we pass this settodos as a prop.
+      We will need to drill it down trhough toDoList to reach TodoCard until you can  
+      the drill path: 
+      pass the funtion as a prop in app.jsx for the todolist import
+      in the todolist add the {...props} to the todocard export
+      then destructure the handleDeleteTodo in TodoCard and pass it as a prop in the button tag
+      you also have to pass the todoIndex from toDoList so that it knows if it can delete the card or not.
+      */}
     handleSaveData(newTodoList)
   }
 
