@@ -5,6 +5,7 @@ import { TodoList } from "./components/TodoList"
 
 import { useState, useEffect } from 'react'
 
+{/*useEffect(() => {}, []) */}
 function App() {
   // const todos = [
   // { input: 'Hello! Add your first todo!', complete: true },
@@ -24,13 +25,13 @@ function App() {
     handleSaveData(newTodoList)
   }
 
-  function handleCompleteTodo(index) {
+  function handleCompleteTodo(index) { // don't forget to pass this as a prop to get it into the todoCard
     // update/edit/modify
     let newTodoList = [...todos]
     let completedTodo = todos[index]
     completedTodo['complete'] = true
-    newTodoList[index] = completedTodo
-    setTodos(newTodoList)
+    newTodoList[index] = completedTodo // this is to override the previous todo list items with the new ones whle giving in this region  that was 
+    setTodos(newTodoList) // this override sets the new todos within the setter function to update the todo list with the completed task
     handleSaveData(newTodoList)
   }
 
@@ -51,8 +52,8 @@ function App() {
     {/*since you can't modify the original list we have to override it. to do this we pass this settodos as a prop.
       We will need to drill it down trhough toDoList to reach TodoCard until you can  
       the drill path: 
-      pass the funtion as a prop in app.jsx for the todolist import
-      in the todolist add the {...props} to the todocard export
+      pass the funtion as a prop in app.jsx for the todolist export
+      in the todolist add the spread operator for props{...props} to the todocard export
       then destructure the handleDeleteTodo in TodoCard and pass it as a prop in the button tag
       you also have to pass the todoIndex from toDoList so that it knows if it can delete the card or not.
       */}
