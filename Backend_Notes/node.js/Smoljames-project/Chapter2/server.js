@@ -5,6 +5,15 @@ const express = require('express') //-this more or less imports the express pack
 const app = express() // this defines the backend application
 const PORT = 8383 // referenced to have the variable name in all caps. pick a 4 digit port number that's available
 
+
+{/* the core requirements of getting a backend server up and running is very minimal
+    granted it does nothing but after telling node in the terminal to run it. "node server.js" 
+    it will start listenting to network requests until you manual close it
+const express = require('express')
+const app = express() 
+const PORT = (look into on how to find port number)
+app.listen(PORT, () => console.log(`Server has started on: ${PORT}`)) */}
+
 let data = ['james']
 
 // Middleware

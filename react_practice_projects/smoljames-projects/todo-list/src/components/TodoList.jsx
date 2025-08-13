@@ -19,7 +19,8 @@ export function TodoList(props) {
             {filterTodosList.map((todo, todoIndex) => { 
                 {/* replacing "todos.map" with "filterTodosList.map" for line 19 help map only the relevent items 
                     while the filterToDoList variable on line 9 will remove all the irrelevent items */}  
-                const tempTodoIndex = todos.findIndex(val => val.input == todo.input)
+                const tempTodoIndex = todos.findIndex(val => val.input == todo.input)   //when finding the index make sure that is grabbing from the original array instead of one that is being filtered. 
+                                                                                        // this way it won't miss any items that are filtered out.
                 console.log(tempTodoIndex)
                 {/*finding an index like this has it's limitations and in later courses we learn a more sophisticated way of doing it 
                     (the limitation is that the code might misbehave if you have two todos with the exact same text :) See if you can figure out why!)*/}

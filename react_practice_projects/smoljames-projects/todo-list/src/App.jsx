@@ -5,7 +5,6 @@ import { TodoList } from "./components/TodoList"
 
 import { useState, useEffect } from 'react'
 
-{/*useEffect(() => {}, []) */}
 function App() {
   // const todos = [
   // { input: 'Hello! Add your first todo!', complete: true },
@@ -63,9 +62,22 @@ function App() {
   function handleSaveData(currTodos) {
     localStorage.setItem('todo-app', JSON.stringify({ todos: currTodos }))
   }
+      {/* you have to make the item you're trying to pass into your assigned key('todo-app') an object {todos}
+        then you can convert anything that passes though said object to store it as a json.string store all your items or todos to  chrome's local storage.
+        hey did you know, you can assign things to the key. { todos(key): currTodos(assigned term) } 
+        this can be used to pass an arugement through the function without having to using too similar names for 2 different  com
+        */}
+
+  {/*useEffect(() => {})
+    This is the basic arguement for useEffect which can ad additional arugements wtih a ","
+    as it is, this will run the function after every re-render(everytime the page loads)
+    however you can add depencencies to make this only run when you need it to
+    useEffect(() => {}, []) - this makes it run only on mount/initilization of the webpage
+    useEffect(() => {}, [value]) - When you add a value not only will it run on mount, it will need to meet the depenency's requirements to run it as well 
+  */}
 
   useEffect(() => {
-    if (!localStorage || !localStorage.getItem('todo-app')) { return }
+    if (!localStorage || !localStorage.getItem('todo-app')) { return } // guard clause. Basically states: If it there is no local storage of it does find local storage but cant find the item todo-app it will return and run through until it can
     let db = JSON.parse(localStorage.getItem('todo-app'))
     setTodos(db.todos)
   }, [])
