@@ -34,13 +34,27 @@ app.use(express.json())
 ** VERBs(methods) are what help the server communicate with the client side. Paths are just additions to the home page of your weblink that lead to other parts of your page.
 */
 // ENDPOINT - HTTP VERBS (method) && Routes (or paths)
-// The method informs the nature of request and the route is a further subdirectory (basically we direct the request to the body of code to respond appropriately, and these locations or routes are called endpoints)
+//! The method informs the nature of request and the route is a further subdirectory (basically we direct the request to the body of code to respond appropriately, and these locations or routes are called endpoints)
 
-// Type 1 - Website endpoints (these endpoints are for sending back html and they typically come when a user enters a url in a browser)
+//! Type 1 - Website endpoints (these endpoints are for sending back html and they typically come when a user enters a url in a browser)
 
 /**
- ** how to structure the app.get method to get the home route:
- *? app.get('/', ()=>)
+** we are configuring how home route which at base requires this code here:
+*? app.get('/', ()=>{})
+** this will help with incoming network requests to route to the home page
+** this needs to take at least 2 arguements. First is the route or path. For home routes they only take "/"
+** the second is the request and response. which is taken in the form of a arrow function ex (req,res)=>{}
+** within the brackets you write your code to send the response to the client request
+ */
+
+/**
+app.get('/', (req, res) => {
+** this is endpoint #1 - /
+    console.log('Yay I hit an endpoint', req.method) //the req.method calls the verb which in this case is "HTTP VERB"
+    res.sendStatus(200)
+** reposnse types: html, json, strings, statuscodes, etc. There's more i'm sure but this was what was mentioned in the video
+}
+ * we understand the intention of said request with the req part of arguement and we response with the res part of the arguement
  */
 
 app.get('/', (req, res) => {
@@ -91,6 +105,7 @@ app.delete('/api/data', (req, res) => {
 })
 
 
-app.listen(PORT, () => console.log(`Server has started on: ${PORT}`)) // this line will always be at the end.Once configured this will listen to incoming requests. 
+app.listen(PORT, () => console.log(`Server has started on: ${PORT}`)) // this line will always be at the end.
+// Once configured this will listen to incoming requests. 
 // The arrow function on line 66 in this case is used as a call back function and will execute when the site is up and running. 
 // ${} is a way to inject variables into template literal strings 
