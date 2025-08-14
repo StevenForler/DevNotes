@@ -51,10 +51,11 @@ app.use(express.json())
 app.get('/', (req, res) => {
 ** this is endpoint #1 - /
     console.log('Yay I hit an endpoint', req.method) //the req.method calls the verb which in this case is "HTTP VERB"
-    res.sendStatus(200)
+    res.sendStatus(200) //* 100-199(received and in process), 200-299(successful request), 300-399(successful but possibly has more than 1 response ), 400-499(communication error), 500-599(server side error)
 ** reposnse types: html, json, strings, statuscodes, etc. There's more i'm sure but this was what was mentioned in the video
 }
- * we understand the intention of said request with the req part of arguement and we response with the res part of the arguement
+* we understand the intention of said request with the req part of arguement and we response with the res part of the arguement
+* Its also really straight forward to add more routes/paths. you just create another app.get function but with a different route name but still using the home name
  */
 
 app.get('/', (req, res) => {
