@@ -81,6 +81,12 @@ app.get('/dashboard', (req, res) => {
         `)
 })
 
+/**
+** there's an extension call, client emulator that helps client side testing especially when you're testing for certain things like data point api's to see how you would get said information.
+*todo go to extensions tab; install rest client by huachao mao; build a file named test.rest or rest.client,
+
+*/
+
 // Type 2 - API endpoints (non visual)
 
 //CRUD-method create-post read-get update-put and delete-delete
