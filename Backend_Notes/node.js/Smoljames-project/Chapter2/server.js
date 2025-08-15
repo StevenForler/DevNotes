@@ -91,6 +91,14 @@ app.get('/dashboard', (req, res) => {
 
 //CRUD-method create-post read-get update-put and delete-delete
 
+/**
+** All the HTTP methods all fit under the umbrella term of CRUD actions
+* (create) post - Creates 1 or more objects
+* (read) get - retrieves an object(s) or parts from an object
+* (update) put - updating the object.
+* (delete) delete
+*/
+
 app.get('/api/data', (req, res) => {
     console.log('This one was for data')
     res.status(599).send(data)
