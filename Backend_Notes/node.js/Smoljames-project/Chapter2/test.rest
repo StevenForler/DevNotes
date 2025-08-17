@@ -7,11 +7,13 @@ GET http://localhost:8383/dashboard
 ### DATA ENDPOINT 
 GET http://localhost:8383/api/data
 
+# post method requrires 2 arguements. Defining the information and configure the parameter of the network request
+# Content-Type: this parses the request from the client and the server will interpret that info AS whatever is demarkated. In this case JSON
 ### DATA ENDPOINT FOR ADDING A USER
 POST http://localhost:8383/api/data
-Content-Type: application/json
+Content-Type: application/json 
 
-{
+{ //! space above this is important for formatting 
     "name": "gilgamesh"
 }
 

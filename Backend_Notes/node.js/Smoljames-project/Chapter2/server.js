@@ -26,7 +26,7 @@ app.listen(PORT, () => console.log(`Server has started on: ${PORT}`)) */}
 let data = ['james']
 
 // Middleware
-app.use(express.json())
+app.use(express.json()) //* middleware to my understanding is to help mediate incoming requests to the server to expect a specified kind of data
 
 /**  
 ** At base the server isn't ready to handle incomming requests or interpret incoming requests.
@@ -75,9 +75,7 @@ app.get('/dashboard', (req, res) => {
         <body>
         <h1>dashboard</h1>
         <a href="/">home</a>
-        </body>
-        
-        
+        </body>     
         `)
 })
 

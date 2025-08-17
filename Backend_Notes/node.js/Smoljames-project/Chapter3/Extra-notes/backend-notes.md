@@ -1,0 +1,1 @@
+when serving up a website all the assets made for the frontend go to the "public" folder. 
