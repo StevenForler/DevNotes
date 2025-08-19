@@ -18,7 +18,8 @@ const __dirname = dirname(__filename) // this helps tell the system where to fin
 app.use(express.json())
 // Serves the HTML file from the /public directory
 // Tells express to serve all files from the public folder as static assets / file. Any requests for the css files will be resolved to the public directory.
-app.use(express.static(path.join(__dirname, '../public'))) // the ../ in locating the public folder just means it going up 1 folder to grab the actual location
+app.use(express.static(path.join(__dirname, '../public')))  // the ../ in locating the public folder just means it going up 1 folder to grab the actual location
+                                                            // this also helps load the filesas static assets/files with the express.static
 
 // Serving up the HTML file from the /public directory
 app.get('/', (req, res) => { 
