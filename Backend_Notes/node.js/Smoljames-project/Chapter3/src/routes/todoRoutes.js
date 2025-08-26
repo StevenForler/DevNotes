@@ -32,7 +32,7 @@ router.put('/:id', (req, res) => {
 })
 
 // Delete a todo
-router.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res) => { //using JSON to specify the id is an option but using a dynamic query parameter is a bit more flexible.
     const { id } = req.params
     const userId = req.userId
     const deleteTodo = db.prepare(`DELETE FROM todos WHERE id = ? AND user_id = ?`)

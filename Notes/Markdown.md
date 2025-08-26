@@ -8,11 +8,10 @@
 ### this is an h3
 ###### this is an h6 <!-- this is as small as it goes-->
 
-This is a paragraph. To make another one you just go to the next line ideally with a break inbetween
+This is a paragraph. To make another one you just go to the next line ideally with a break inbetween.  
+to create a line break you add 2 spaces where you want the line to break.
 
 surrounding the word with double astrisks will make it **bold** surounding the word with single astrisks will make it *Italic*
-
-how to make a codebox <!-- the code in this box is not accurate its was just auto generated just to plug in for an example-->
 
 here how to make a bulleted list
 
@@ -36,6 +35,8 @@ you can draw out your table as well
 |column 1|Column 2|
 |--------|--------|
 |really long item| meowthington the third|
+
+how to make a codebox <!-- the code in this box is not accurate its was just auto generated just to plug in for an example both triple backticks or tildes work to create this.-->
 
 '''
 

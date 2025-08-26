@@ -1,13 +1,18 @@
 import express from 'express'
-import bcrypt from 'bcryptjs'
-import jwt from 'jsonwebtoken'
+import bcrypt from 'bcryptjs' // this package has all the tools needed to encrypt all the passwords stored
+import jwt from 'jsonwebtoken' // creates an alpha numeric key that generates a password associated to a user to authenticate them for future web requests
 import db from '../db.js'
 
-const router = express.Router()
+const router = express.Router() /* this helps create routes easier by tagging at the end of your path anything using the "router." add-on in the beginning.
+                                    anything that uses that prefix, the server will what its tied to and stick it to the route creating a new webpath 
+                                    ex: app.use('/auth', authRoutes) authRoutes refers to any function with the prefix previously mentioned.*/
 
 // Register a new user endpoing /auth/register
-router.post('/register', (req, res) => {
-    const { username, password } = req.body
+router.post('/register', (req, res) => { // by default, no res set, it can take 5-15sec to timeout.
+    const { username, password } = req.body /* this can be done also by using this: const body = req.body
+                                                this pulls the json body of the incoming request
+                                                but this requires extra steps to access the username and password keys
+                                                however Destructuring it saves this step*/
     // save the username and an irreversibly encrypted password
     // save gilgamesh@gmail.com | aklsdjfasdf.asdf..qwe..q.we...qwe.qw.easd
 
