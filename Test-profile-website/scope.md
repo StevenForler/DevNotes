@@ -5,16 +5,18 @@ Features to consider
     - Horizontal navbar
     - maybe transition to a side bar.
 
-- Summary page
+- Summary page ✔
     - Make this a static page
     - also make this the home page
 - Embedded stream page
     - dynamic
     - self explanatory stream with chat
     - adding a schedule would be good too
-- Web portfolio page
+- Coding project page
     - dynamic
-    - have the portfolio on the page
+    - Newest project on the About me page 
+        - have the portfolio linked on the page
+            - rotate project every 24 hours
     - build a separate webpage portfolio for interviews
 - Hobbies page
     - dynamic
@@ -22,7 +24,9 @@ Features to consider
         - possibly lead it to my music instagram instead
         - or youtube video?
     - use PB video for cubing reference
-- Contact page
-    - static page
-    - Email
-    - eventually add socials
+- Contact page 
+    - static pages
+    - one for the web portfolio site
+        - Email and contact information 
+        - set up email box to type your emailto contact
+    - eventually make social media page
