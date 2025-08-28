@@ -1,13 +1,9 @@
-import Summary from "../pages/summary"
-import Contact from "../pages/contact"
-import Hobbies from "../pages/hobbies"
+import { PageRoutes} from './routes'
 function App() {
 
   return (
     <div>
-        {/* <Summary/> */}
-        {/* <Contact/> */}
-        <Hobbies/>
+        <PageRoutes/>
     </div>
   )
 }
