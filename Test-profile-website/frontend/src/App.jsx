@@ -1,9 +1,9 @@
-import { PageRoutes} from './routes'
+import { Pageroutes} from './routes'
 function App() {
 
   return (
     <div>
-        <PageRoutes/>
+        <Pageroutes/>
     </div>
   )
 }

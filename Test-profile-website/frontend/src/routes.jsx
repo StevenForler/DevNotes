@@ -1,10 +1,6 @@
 import { Route, hashRouter as Router, Routes } from 'react-router-dom'
-import { Layout } from './layout'
-import { Projects } from './pages/coding-projects'
-import { Contact } from './pages/contact'
-import { Hobbies } from './pages/hobbies'
-import { Stream } from './pages/stream'
-import { Summary } from './pages/summary'
+import {Summary} from './pages/summary.jsx'
+
 
 export function Pageroutes(){
 
