@@ -1,4 +1,4 @@
-export function Stream (){
+export function Twitch (){
     return(
         <div className="stream-container">
             <p>My Stream</p>
