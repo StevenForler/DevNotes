@@ -1,4 +1,4 @@
-function Summary() {
+function Home() {
 
   return (
     <div className='home-container'>
@@ -10,4 +10,4 @@ function Summary() {
   )
 }
 
-export default Summary
+export default Home
