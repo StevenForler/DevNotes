@@ -1,27 +1,14 @@
 import Navbar from "../component/navbar"
-import Contact from "../pages/contact"
-import Hobbies from "../pages/hobbies"
-import Twitch from "../pages/twitch"
-import Summary from "../pages/summary"
-import Projects from "../pages/coding-projects"
-import {route, Routes} from "react-router-dom"
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <div>
-        <Routes>
-          <Route path="/" element={<Summary />}/>
-          <Route path="/projects" element={<Projects />}/>
-          <Route path="/hobbies" element={<Hobbies />} />
-          <Route path="/Twitch" element={<Twitch />} />
-          <Route path="/Contact" element={<Contact />} />
-        </Routes>
-      </div>
+    <Navbar/>
     </>
   )
 }
 
 export default App
+
+//https://www.youtube.com/watch?v=qUV2kgYdr9k - following this video for navbar
