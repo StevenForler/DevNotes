@@ -1,22 +1,16 @@
-import {Routes, Route} from "react-router-dom";
-import { Navbar } from "../component/navbar";
-import {Projects} from "../pages/coding-projects";
-import {Twitch} from "../pages/twitch";
+import { Navbar } from "../component/navbar"
+import {Route, Routes} from "react-router-dom"
 import {Home} from "../pages/home";
-import {Hobbies} from "../pages/hobbies";
-import {Contact} from "../pages/contact";
+
 
 function App() {
   return (
-    <div /*CSS stuff goes here */>
+    <div>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/projects" element={<Projects/>} />
-        <Route path="/hobbies" element={<Hobbies/>} />
-        <Route path="/twitch" element={<Twitch/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/" element={<Home/>}/>
       </Routes>
+
     </div>
   )
 }
