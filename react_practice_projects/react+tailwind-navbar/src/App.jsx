@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-full absolute bg-gradient-to-r
+      <div className="w-full h-full absolute bg-linear-to-tr
       from-blue-400 to bg-emerald-400">
         <header className=" flex justify-between items-center text-black py-6 px-8
         md:px-32 bg-white drop-shadow-md">

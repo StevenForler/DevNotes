@@ -1,2 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+--color-Paleiceblue: #61aee8;
+--color-Darkindigo: #3730a3;
+--color-Midnightsnow: #19164b;
+}
+
+/* color set one 
+--color-lightpurple/lavender: #8f94fb;
+--color-Darkindigo-ish?: #3730a3; 
+
+#61aee8
+#61a0e8
+#A7BFE8*/

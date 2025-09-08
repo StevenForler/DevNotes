@@ -1,6 +1,7 @@
-function Projects (){
+export function Projects (){
     return(
-        <div>
+        <div className="w-full h-full absolute bg-linear-to-tr
+        from-Paleiceblue to bg-Darkindigo">
             <h1>Current Coding Project</h1>
             <img src="https://placehold.co/600x400" alt="Home page of most recent project"/>
                 <a>Node.JS</a> <a>Python</a> <a>Golang</a>
@@ -8,5 +9,3 @@ function Projects (){
         </div>
     )
 }
-
-export default Projects
