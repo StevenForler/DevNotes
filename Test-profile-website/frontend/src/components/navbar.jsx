@@ -5,33 +5,30 @@ export function Navbar(){
         <>
             <div >
                 <header className="bg-Midnightsnow flex py-3 justify-around items-center font-semibold text-base" >
-                    <a href="/"> 
-                        <img src="https://placehold.co/600x150" alt="" className="w-52 hover:scale-105 transition-all"></img> 
-                    </a>
-                    <ul className="flex ">
+                    <ul className="flex gap-12 ">
                         <li>
-                        <Link to="/">
-                            <button>Home</button>
+                        <Link to="/" >
+                            <button className="cursor-pointer">Home</button>
                         </Link>
                         </li>
                         <li>
                         <Link to="/projects">
-                            <button>Projects</button>
+                            <button className="cursor-pointer">Projects</button>
                         </Link>
                         </li>
                         <li>
                         <Link to="/hobbies">
-                            <button>Hobbies</button>
+                            <button className="cursor-pointer">Hobbies</button>
                         </Link>
                         </li>
                         <li>
                         <Link to="/twitch">
-                            <button>Twitch</button>
+                            <button className="cursor-pointer">Twitch</button>
                         </Link>
                         </li>
                         <li>
                         <Link to="/contact">
-                            <button>Contact</button>
+                            <button className="cursor-pointer">Contact</button>
                         </Link>
                         </li>
                     </ul>
