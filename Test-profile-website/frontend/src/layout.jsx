@@ -10,6 +10,7 @@ export function Layout(){
             <main>
                 <Outlet/>
             </main>
+            
         </>
     )
 }
