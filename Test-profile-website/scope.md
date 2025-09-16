@@ -28,5 +28,5 @@ Features to consider
     - static pages
     - one for the web portfolio site
         - Email and contact information 
-        - set up email box to type your emailto contact
+        - set up email box to type your email to contact
     - eventually make social media page
