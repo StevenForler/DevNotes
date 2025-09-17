@@ -1,1 +1,0 @@
-// look into servicing a single page site and let react router handle the routing 
