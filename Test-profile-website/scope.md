@@ -30,3 +30,16 @@ Features to consider
         - Email and contact information 
         - set up email box to type your email to contact
     - eventually make social media page
+
+
+## Next update. components and things to add to profile page.
+
+- personal blog
+    - write about coding pursuits
+    - musical projects
+    - language learning progress
+- collections
+    - rubik's cubes
+    - guitar gear
+
+
