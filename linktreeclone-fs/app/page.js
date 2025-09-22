@@ -1,6 +1,6 @@
 import { Placeholder } from "@/components/placeholder";
 import { Cloud } from "@/components/gif";
-import { Youtube } from "lucide-react";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
 import { Cardlink } from "@/components/cardlink";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
         <h1>Coding station</h1>
         <h2>SteveticusTheThird</h2>
       </div>
-      <div>
+      <div className="flex flex-col items-center gap-5">
         {links.map(link => <Cardlink link={link} key={link.text}/>)}
       </div>
     </div>
@@ -26,6 +26,14 @@ export default function Home() {
 const links=[
   {link: "https://www.youtube.com/@codingstation11", 
   text: 'Youtube', 
-  icon:<Youtube/>,
-  }
+  icon:<Youtube className="-mr-8" size={24} color="navy"/>,
+  },
+  {link: "https://www.youtube.com/@codingstation11", 
+  text: 'Instagram', 
+  icon:<Instagram className="-mr-8" size={24} color="navy"/>,
+  },
+  {link: "https://www.youtube.com/@codingstation11", 
+  text: 'Linkedin', 
+  icon:<Linkedin className="-mr-8" size={24} color="navy"/>,
+  },
 ];
