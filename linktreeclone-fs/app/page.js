@@ -2,6 +2,7 @@ import { Placeholder } from "@/components/placeholder";
 import { Cloud } from "@/components/gif";
 import { Instagram, Linkedin, Youtube } from "lucide-react";
 import { Cardlink } from "@/components/cardlink";
+import Share from "@/components/Share";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <div className="flex flex-col items-center gap-5">
         {links.map(link => <Cardlink link={link} key={link.text}/>)}
       </div>
+
+      <Share/>
     </div>
   );
 }
