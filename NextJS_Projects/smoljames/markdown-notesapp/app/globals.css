@@ -1,0 +1,37 @@
+/* GENERAL */
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+
+
+/* HERO */
+#hero{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* this is saying repeat 1 column at minimum 0(really small) or max(1 fraction of the total[view?]) more than 1 column would be just an equal fraction*/
+}
+
+#hero > div { /* the > in this is meaning the direct div descendance of the parent with the ID = "hero" */
+    padding: 2rem;
+    
+}
+
+
+
+
+
+
+
+/* DASHBOARD */
+
+
+
+/* UTILITIY */
+
+
+
+
+/* MEDIA QUERIES */
