@@ -31,10 +31,11 @@ export default function Login() {
                 </div>
                 <div className="full-line"></div>
                 <footer>
-                    <a target="_blank" href="https://github.com/"></a>
+                    <a target="_blank" href="https://github.com/">
                         <img alt="pfp" src="https://avatars.githubusercontent.com/u/48844649?v=4" />
                         <h6>@steveticus</h6>
                         <i className="fa-brands fa-github"></i>
+                    </a>
                 </footer>
             </div>
         </>
