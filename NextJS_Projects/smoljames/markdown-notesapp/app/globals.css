@@ -1,3 +1,9 @@
+/*
+List of functions to look into 
+max-width: unset; - wasn't explained what this does or it wasn't explained at length
+*/
+
+
 /* GENERAL */
 #app {
     display: flex;
@@ -6,15 +12,14 @@
 
 }
 
-
-
-/* HERO */
+/* HERO */ /*reminder this is all for mobile experience first. desktop section will be demarkated */
 #hero{
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr)); /* this is saying repeat 1 column at minimum 0(really small) or max(1 fraction of the total[view?]) more than 1 column would be just an equal fraction*/
 }
 
-#hero > div { /* the > in this is meaning the direct div descendance of the parent with the ID = "hero" */
+#hero > div { /* the > in this is meaning the direct div descendance of the parent with the ID = "hero" 
+    without the > you're instead sub-selecting that tag/element */
     padding: 2rem;
     
 }
@@ -46,9 +51,61 @@
     gap: 1.25rem;
     max-width: 600px;
     width: 100%;
-    margin: 0 auto ;
+    margin: 0 auto ; /*1st placement: Y-axis 2nd placement: X-axis*/
 }
 
+.login-container input{
+    width: 100%;
+    max-width: unset;
+    padding: 0.75rem;
+
+}
+
+.submit-btn { /*expands the button to 100% of the width and centers said button*/
+    width: 100%;
+    max-width: unset;
+    display: grid;
+    place-items: center;
+}
+
+.secondary-btns-container { /*gives secondary buttons their own column to work with (login, forgot password)*/
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
+}
+
+.secondary-btns-container button {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: unset;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+footer a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    padding-right: 0.75rem;
+    background: var(--background-muted);
+    border: 1px solid transparent;/* the transparent option is to help with preventing any jump around jankiness when the hover effect takes place but it has to exist to allow the hover effect to work*/
+    transition-duration: 200ms;
+    text-decoration: none;
+}
+
+footer a:hover{
+    border-color: var(--color-link);
+}
 /* DASHBOARD */
 
 
