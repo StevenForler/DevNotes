@@ -1,6 +1,7 @@
 import Login from "@/components/Login";
-// left off at 1:37:27
+// left off at 1:50:40
 // Notes starting point 1:23:40
+// Additional React Components and imports 1:37:28
 
 export default function Home() {
   return (
