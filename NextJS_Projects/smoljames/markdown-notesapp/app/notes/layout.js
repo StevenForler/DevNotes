@@ -4,7 +4,7 @@ export default function NoteLayouts(props){
     const { children } = props // this is a one line destructuring for the children content which in this case is the content of the page.js file
     return (
         <div>
-            {children}
+            {children} {/*since children is JS we need to use curly brackets to inject the contents of "children" onto the page*/}
         </div>
     )
 }

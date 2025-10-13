@@ -1,5 +1,5 @@
 import Login from "@/components/Login";
-// left off at 1:26:17
+// left off at 1:37:27
 // Notes starting point 1:23:40
 
 export default function Home() {
