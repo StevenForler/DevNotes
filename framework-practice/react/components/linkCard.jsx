@@ -7,12 +7,6 @@ export default function LinkCard(){
             <div>
                 <p>Pokemon Tools</p>
             </div>
-            <div>
-                <p>Pokemon Inspired Games</p>
-            </div>
-            <div>
-                <p>Pokemon Romhacks</p>
-            </div>
         </>
     )
 }
