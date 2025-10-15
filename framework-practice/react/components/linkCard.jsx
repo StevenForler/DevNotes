@@ -3,10 +3,8 @@
 
 export default function LinkCard(){
     return(
-        <>
-            <div>
-                <p>Pokemon Tools</p>
-            </div>
-        </>
+        <div className="max-w-xs mx-auto flex flex-col items-center gap-10">
+            <div className="w-80 text-center border-2 border-black"> Button text goes here </div>
+        </div>
     )
 }
