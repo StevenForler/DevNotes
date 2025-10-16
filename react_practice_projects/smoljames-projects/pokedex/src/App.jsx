@@ -3,7 +3,7 @@ import PokeCard from "./components/PokeCard"
 import SideNav from "./components/SideNav"
 
 import { useState } from 'react'
-
+// last left off at 3:17:32
 function App() {
   const [selectedPokemon, setSelectedPokemon] = useState(0)
   const [showSideMenu, setShowSideMenu] = useState(true) // this does the opposite of what it should do (ie, when showSideMenu it true, it's actually false)
