@@ -10,6 +10,14 @@
 --color-lightpurple/lavender: #8f94fb;
 --color-Darkindigo-ish?: #3730a3; 
 
+to group Tailwind utilities you use the @apply and format it like this.
+
+.btn-primary {
+    @apply bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700;
+}
+
+
+
 #61aee8
 #61a0e8
 #A7BFE8*/
