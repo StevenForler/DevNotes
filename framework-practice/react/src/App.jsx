@@ -1,33 +1,38 @@
+import Joke from "../components/joke"
 import Linktree  from "../components/linkTreeRef"
-import PropsPractice1 from "../components/propsPractice1"
 
-function App() {
-  
-  const links = [
-{
-	color: "bg-red-500",
-	text: "Buy me coffee ☕️",
-	link: "https://github.com",
-},
-{
-	color: "bg-blue-600",
-	text: "Join My Newsletter 🗞",
-	link: "https://github.com",
-},
-{
-	color: "bg-zinc-100",
-	text: "Learn Code 💻",
-	link: "https://github.com",
-},
-];
+export default function App() {
+	
+	const jokes =[
+		{
+			id: 1,
+			text: " I used to be a banker, but then I lost interest!",
+			rating: 3
+		},
+		{
+			id: 2,
+			text:" I'm afraid for the calendar. Its days are numbered",
+			rating: 4
+		},
+		{
+			id: 3,
+			text:" I used to be addicted to soap, but I'm clean now.",
+			rating: 5
+		},
+		{
+			id: 4,
+			text:"I'm reading a book on anti-gravity. It's impossible to put it down!",
+			rating: 1
+		}
+]
+	const jokesComponents = jokes.map(joke => (
+		<Joke key={joke.id}	dadJoke={joke.text} rating ={joke.rating}/>
+	))
 
-  return (
-    <div >
-      {links.map(({text,color,link}, index) => {
-        return <PropsPractice1 key={index} text={text.text} color={color.color} link={link.link}/>
-      })}
-    </div>
-  )
+	return (
+		<div className="">
+			<h1>Dad Jokes</h1>
+			{jokesComponents}
+		</div>
+	)
 }
-
-export default App
