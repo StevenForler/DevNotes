@@ -1,14 +1,12 @@
 // this is a simple import to app.jsx and render it
-
+// work on figuring out why its not showing as multiple instances instead of it just being in one box
 export default function Fruits({items}) {
 
     
     return (
-        <div>
-            <ul className="w-80 sm:w-96 mx-auto ${color} text-center text-xl font-bold py-3 border-2 border-black shadow-meow hover:shadow-none transition-all hover:translate-x-1 hover:translate-y-1">
+        <div className="w-80 sm:w-96 mx-auto ${color} text-center text-xl font-bold py-3 border-2 border-black shadow-meow hover:shadow-none transition-all hover:translate-x-1 hover:translate-y-1">
                 {items.map(({name, price, emoji}) => ( 
-                <li key={name}> {emoji} {name} {price}</li>))}
-            </ul>
+                <div key={name}> {emoji} {name} {price}</div>))}
         </div>
     )
 }
