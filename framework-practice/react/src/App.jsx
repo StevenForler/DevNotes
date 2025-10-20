@@ -1,38 +1,23 @@
-import Joke from "../components/joke"
+import Fruits from "../components/fruits"
 import Linktree  from "../components/linkTreeRef"
+import PropsPractice1 from "../components/propsPractice1"
+
 
 export default function App() {
-	
-	const jokes =[
-		{
-			id: 1,
-			text: " I used to be a banker, but then I lost interest!",
-			rating: 3
-		},
-		{
-			id: 2,
-			text:" I'm afraid for the calendar. Its days are numbered",
-			rating: 4
-		},
-		{
-			id: 3,
-			text:" I used to be addicted to soap, but I'm clean now.",
-			rating: 5
-		},
-		{
-			id: 4,
-			text:"I'm reading a book on anti-gravity. It's impossible to put it down!",
-			rating: 1
-		}
-]
-	const jokesComponents = jokes.map(joke => (
-		<Joke key={joke.id}	dadJoke={joke.text} rating ={joke.rating}/>
-	))
+
+const fruits = [
+        {name: "Apple", price: 4, emoji:"🍏"},
+        {name: "Mango", price: 6, emoji:"🥭"},
+        {name: "Banana", price: 1, emoji:"🍌"},
+        {name: "Orange", price: 2, emoji:"🍊"},
+        {name: "Pineapple", price: 8, emoji:"🍍"},
+        {name: "Strawberry", price: 25, emoji:"🍓"},
+];
 
 	return (
-		<div className="">
-			<h1>Dad Jokes</h1>
-			{jokesComponents}
+		<div>
+			<Fruits items={fruits}/>
 		</div>
 	)
 }
+
