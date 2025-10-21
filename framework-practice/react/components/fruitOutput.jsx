@@ -14,9 +14,9 @@ const fruits = [
         {name: "Strawberry", price: 25, emoji:"🍓"},
 ];
 
-        return (
-                <div>
-                        <Fruits items={fruits}/>
-                </div>
-        )
+    return (
+        <div>
+            <Fruits items={fruits}/>
+        </div>
+    )
 }

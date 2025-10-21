@@ -11,6 +11,48 @@ export default function Fruits({items}) {
     )
 }
 
+// const fruits = [ 
+//         {name: "Apple", price: 4, emoji:"🍏"},
+//         {name: "Mango", price: 6, emoji:"🥭"},
+// ]
+
+// export default function App() {
+
+// 	return (
+//                 <div>
+//                         {fruits.map(({name, price, emoji},index) => ( same as the one next one down just using () instead of {curly brackets}
+//                                 <div className="border-2 border-black">
+                                        
+//                                 </div>
+//                         ))}
+//                 </div>
+// 	)
+// }
+
+
+
+// const fruits = [ // this is the way to have it render as many times as there are objects
+//         {name: "Apple", price: 4, emoji:"🍏"},
+//         {name: "Mango", price: 6, emoji:"🥭"},
+// ]
+
+// export default function App() { 
+
+// 	return (
+//                 <div>
+//                 {fruits.map(({name, price, emoji},index) => { // this example requires the use of return() within the function because of its use of {curly brackets}. if you used () it would imply the return instead since it only can return 1 of anything
+//                         return(
+//                                 <div className="border-2 border-black">
+//                                         text
+//                                 </div>
+//                         )
+//                 })}
+//                 </div>
+// 	)
+// }
+
+
+
 // try and recreate this example below and 
 // export function ProfileCard({ name, age, occupation, location }) {
 //   return (
