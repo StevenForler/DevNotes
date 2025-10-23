@@ -4,9 +4,10 @@ export default function Fruits({items}) {
 
     
     return (
-        <div className="w-80 sm:w-96 mx-auto ${color} text-center text-xl font-bold py-3 border-2 border-black shadow-meow hover:shadow-none transition-all hover:translate-x-1 hover:translate-y-1">
-                {items.map(({name, price, emoji}) => ( 
-                <div key={name}> {emoji} {name} {price}</div>))}
+        <div>
+                {items.map(({name, price, emoji},index) => ( 
+                <div key={index} className="w-80 sm:w-96 mx-auto mt-5 text-center text-xl font-bold py-3 border-2 border-black shadow-meow hover:shadow-none transition-all hover:translate-x-1 hover:translate-y-1"> 
+                {emoji} {name} {price}</div>))}
         </div>
     )
 }
