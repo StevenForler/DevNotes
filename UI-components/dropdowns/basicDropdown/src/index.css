@@ -32,7 +32,27 @@
 #dropdown-info {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: lightgray;
   color: black ;
+  border-radius: 4px;
+  margin-top: .5rem;
 }
 
+
+
+a {
+  color: black;
+  padding: .5rem;
+  
+}
+
+a:hover {
+  color: teal;
+  background-color: aliceblue;
+  border-radius: 4px;
+  /* transition-property: 200; figure this out later */
+}
+
+a:visited {
+  color: blueviolet;
+}

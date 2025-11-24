@@ -15,9 +15,9 @@ const Dropdown = () => {
                 {isOpen && (
                 <div id="dropdown-info">
                     {menuItems.map((item) =>(
-                        <p  key={item} href={item}> 
+                        <a  key={item} href={item}> 
                             {item}
-                        </p>
+                        </a>
                     ))}
                 </div>
             )}
