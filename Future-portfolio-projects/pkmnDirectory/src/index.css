@@ -1,4 +1,4 @@
-/* @import "tailwindcss";
+@import "tailwindcss";
 
 @theme {
     --shadow-meow:  10px 10px 0px -1px #2e1c80;
@@ -10,4 +10,4 @@
 
 .bullet{
     @apply list-disc pl-5 marker:text-black;
-} unsure if this auto gives role="list" function */
+} unsure if this auto gives role="list" function

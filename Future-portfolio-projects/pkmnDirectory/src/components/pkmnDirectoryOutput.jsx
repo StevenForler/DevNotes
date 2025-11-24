@@ -7,8 +7,8 @@ export default function App() {
 const info = [
 
         { id:0, text: "Resources", color: "bg-red-500"},
-    { id:1, text: "PKMN-inspired games", color: "bg-cyan-600"},
-    { id:2, text: "Romhacks", color: "bg-zinc-100"},
+        { id:1, text: "PKMN-inspired games", color: "bg-cyan-600"},
+        { id:2, text: "Romhacks", color: "bg-zinc-100"},
 ];
 
 return (// get background color to stretch full view height of screen
