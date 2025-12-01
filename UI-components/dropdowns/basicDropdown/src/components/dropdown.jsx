@@ -31,17 +31,28 @@ const Dropdown = () => {
                 <button onClick={() => setIsOpen((prev) => !prev)}>
                     here's a button
                 </button>
-            </div>
-            <div className="dropdown-container">
-                {isOpen && (
-                <div id="dropdown-info">
-                    {menuItems.map((item) =>(
-                        <a  key={item} href={item}> 
-                            {item}
-                        </a>
-                    ))}
+                <div className="dropdown-container">
+                    {isOpen && (
+                    <div id="dropdown-info">
+                        {menuItems.map((item) =>(
+                            <a  key={item} href={item}> 
+                                {item}
+                            </a>
+                        ))}
+                    </div>
+                    )}
                 </div>
-            )}
+                {/* <div className="dropdown-container">
+                    {isOpen && (
+                    <div id="dropdown-info">
+                        {menuItems.map((item) =>(
+                            <a  key={item} href={item}> 
+                                {item}
+                            </a>
+                        ))}
+                    </div>
+                    )}
+                </div> */}
             </div>
         </div>
     )
