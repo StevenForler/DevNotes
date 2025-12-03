@@ -5,7 +5,7 @@ const Dropdown = () => {
     const dropdownRef = useRef(null);
     useEffect (() => {
         const handleClickOutside = (e) => {
-            if(!dropdownRef.current?.Contains(e.target)) {
+            if(!dropdownRef.current?.contains(e.target)) {
                 setIsOpen(false);
             }
         };
