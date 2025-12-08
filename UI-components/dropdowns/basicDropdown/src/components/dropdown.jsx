@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from "react";
 
-const Dropdown = () => {
+const Dropdown = ({ButtonInfo}) => {
     const [isOpen, setIsOpen] = useState(false)
     const dropdownRef = useRef(null);
     useEffect (() => {
@@ -19,19 +19,23 @@ const Dropdown = () => {
 
     const menuItems = ["Home", "Settings", "Logout"]
     return (
-            <div ref={dropdownRef} className="dropdown-container">
-                <button onClick={() => setIsOpen((prev) => !prev)}>
-                    <span> here's a button </span>
-                </button>
-                    {isOpen && (
-                    <div id="dropdown-info">
-                        {menuItems.map((item) =>(
-                            <a  key={item} href={item}> 
-                                {item}
-                            </a>
+            <div className="something">
+                <div ref={dropdownRef} className="dropdown-container">
+                    {ButtonInfo.map(({id, text}) => (
+                    <button key={id} onClick={() => setIsOpen((prev) => !prev)}>
+                        {text}
+                    </button>
                         ))}
-                    </div>
-                )}
+                        {isOpen && (
+                        <div id="dropdown-info">
+                            {menuItems.map((item) =>(
+                                <a  key={item} href={item}> 
+                                    {item}
+                                </a>
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
     )
 }
