@@ -1,6 +1,4 @@
 import Dropdown from './components/dropdown'
-// https://www.youtube.com/watch?v=iLmIx2HHQwU - 9:30 starts the outside click to close
-// https://github.com/WebDevBey/react-dropdown-menu/blob/main/src/components/Dropdown.jsx
 
 function App() {
 
@@ -22,6 +20,9 @@ const BinfoRD = [
 }
 
 export default App
+
+// https://www.youtube.com/watch?v=iLmIx2HHQwU - 9:30 starts the outside click to close
+// https://github.com/WebDevBey/react-dropdown-menu/blob/main/src/components/Dropdown.jsx
 
 {/* {BinfoRD.map((andSons,id))} */}
     {/* key={id}

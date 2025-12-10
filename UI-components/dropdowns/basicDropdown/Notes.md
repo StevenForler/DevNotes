@@ -220,3 +220,37 @@ function Dropdown({ DropdownPackage }) {
 ```
 
 So this is pretty close to the result of what I'm trying to achieve so its final form is to implement the map method.
+"no changes needed for the dropdown.jsx since its already prepped for the properties"
+
+### will update notes later
+
+app.jsx
+```JSX
+import Dropdown from './components/dropdown';
+
+function App() {
+
+  const BinfoRD = [
+    { id: 0, text: "Button #1", content:["1","2","3"] },
+    { id: 1, text: "Button #2", content:["4","5","6"] },
+    { id: 2, text: "Button #3", content:["7","8","9"] },
+  ];
+
+  return (
+    <div className="page-container">
+      <h1>Sanity Tag</h1>
+
+      {BinfoRD.map(item => (
+        <Dropdown 
+          key={item.id} 
+          DropdownPackage={item}
+        />
+      ))}
+
+    </div>
+  );
+}
+
+export default App;
+
+```
