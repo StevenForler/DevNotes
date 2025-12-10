@@ -13,17 +13,13 @@ const BinfoRD = [
 
   return (
     <div className="page-container">
-      <h1>Sanity Tag</h1>
-      <Dropdown DropdownPackage={BinfoRD[0]}/>
-      <Dropdown DropdownPackage={BinfoRD[1]}/>
-      <Dropdown DropdownPackage={BinfoRD[2]}/>
+    {BinfoRD.map((andSons,id))}
+      <Dropdown
+      key={id}
+      text={andSons.text}
+      content={andSons.content}/>
     </div>
   )
 }
 
 export default App
-
-{/* {BinfoRD.map((andSons,id))} */}
-    {/* key={id}
-      text={andSons.text}
-      content={andSons.content} */}

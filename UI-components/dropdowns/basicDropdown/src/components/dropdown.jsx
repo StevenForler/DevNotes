@@ -1,6 +1,8 @@
 import {useEffect, useRef, useState} from "react";
 
-const Dropdown = ({ButtonInfo}) => {
+function Dropdown ({DropdownPackage}) {
+const {id,text,content} = DropdownPackage
+
     const [isOpen, setIsOpen] = useState(false)
     const dropdownRef = useRef(null);
     useEffect (() => {
@@ -17,27 +19,33 @@ const Dropdown = ({ButtonInfo}) => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, [isOpen]);
 
-    const menuItems = ["Home", "Settings", "Logout"]
+
     return (
-            <div className="something">
-                <div ref={dropdownRef} className="dropdown-container">
-                    {ButtonInfo.map(({id, text}) => (
-                    <button key={id} onClick={() => setIsOpen((prev) => !prev)}>
-                        {text}
-                    </button>
+            <div ref={dropdownRef} className="dropdown-container">
+                <button onClick={() => setIsOpen((prev) => !prev)}>
+                    {text}
+                </button>
+                    {isOpen && (
+                    <div className="dropdown-info">
+                        {content.map(item => (
+                            <div key={item}>{item}</div>
                         ))}
-                        {isOpen && (
-                        <div id="dropdown-info">
-                            {menuItems.map((item) =>(
-                                <a  key={item} href={item}> 
-                                    {item}
-                                </a>
-                            ))}
                         </div>
                     )}
-                </div>
             </div>
     )
 }
 
 export default Dropdown
+
+{/* 
+// const menuItems = ["Home", "Settings", "Logout"]
+    
+    <div className="dropdown-info">
+                        {menuItems.map((items) =>(
+                            <a  key={items} href={items}> 
+                                {items}
+                            </a>
+                        ))}
+                    </div>
+                )} */}

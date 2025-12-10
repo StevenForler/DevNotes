@@ -29,7 +29,7 @@
   height: auto;
 }
 
-#dropdown-info {
+.dropdown-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +37,6 @@
   color: black ;
   border-radius: 4px;
   margin-top: .5rem;
-
 }
 
 a {
