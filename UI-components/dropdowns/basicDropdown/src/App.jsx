@@ -12,9 +12,13 @@ const BinfoRD = [
   return (
     <div className="page-container">
       <h1>Sanity Tag</h1>
-      <Dropdown DropdownPackage={BinfoRD[0]}/>
-      <Dropdown DropdownPackage={BinfoRD[1]}/>
-      <Dropdown DropdownPackage={BinfoRD[2]}/>
+      {BinfoRD.map(item => ( 
+        <Dropdown 
+        key={item.id}
+        DropdownPackage={item}/>
+
+      ))}
+      
     </div>
   )
 }
