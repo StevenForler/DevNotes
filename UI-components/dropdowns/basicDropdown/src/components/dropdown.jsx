@@ -21,6 +21,7 @@ const {id,text,content} = DropdownPackage
 
 
     return (
+        <div className="something">
             <div ref={dropdownRef} className="dropdown-container">
                 <button onClick={() => setIsOpen((prev) => !prev)}>
                     {text}
@@ -28,24 +29,13 @@ const {id,text,content} = DropdownPackage
                     {isOpen && (
                     <div className="dropdown-info">
                         {content.map(item => (
-                            <div key={item}>{item}</div>
+                            <a key={item}>{item}</a>
                         ))}
                         </div>
                     )}
             </div>
+        </div>
     )
 }
 
 export default Dropdown
-
-{/* 
-// const menuItems = ["Home", "Settings", "Logout"]
-    
-    <div className="dropdown-info">
-                        {menuItems.map((items) =>(
-                            <a  key={items} href={items}> 
-                                {items}
-                            </a>
-                        ))}
-                    </div>
-                )} */}
