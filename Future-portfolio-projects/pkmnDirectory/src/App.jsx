@@ -1,14 +1,15 @@
 import PropsPractice1 from "./components/propsPractice1"
 import PropsPractice2 from "./components/propsPractice2";
 import PropsPractice3 from "./components/propsPractice3";
+import { DropdownContent } from "./components/dropdownContent";
 
 export default function App() {
 
 const info = [
 
-        { id:0, text: "Button #1", color: "bg-red-500", content:["link 1","link 2","link 3"]},
-        { id:1, text: "Button #2", color: "bg-cyan-600", content:["link 4","link 5","link 6"]},
-        { id:2, text: "Button #3", color: "bg-zinc-100", content:["link 7","link 8","link 9"]},
+        { id:0, text: "Socials", color: "bg-red-500", content: DropdownContent.button1 },
+        { id:1, text: "Github Projects", color: "bg-cyan-600", content: DropdownContent.button2},
+        { id:2, text: "Contact Me", color: "bg-zinc-100", content: DropdownContent.button3 },
 ];
 
 return (// get background color to stretch full view height of screen

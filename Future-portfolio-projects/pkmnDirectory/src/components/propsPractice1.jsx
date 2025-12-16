@@ -13,7 +13,7 @@ const {id, text, color, content} = buttonPackage
                 {text}
             </div>
                 {isOpen && (
-                <div> 
+                <div className=''> 
                     {content.map(item => (
                         <a key={item}>{item}</a>
                         ))}
