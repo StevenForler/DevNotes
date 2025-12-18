@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { DropdownMenu } from "@/components/ui/dropdown-menu";
 
 export default function PropsPractice1({buttonPackage}) {
 const {id, text, color, content} = buttonPackage
@@ -14,9 +15,9 @@ const {id, text, color, content} = buttonPackage
             </div>
                 {isOpen && (
                 <div className=''> 
-                    {content.map(item => (
+                <DropdownMenu> {content.map(item => (
                         <a key={item}>{item}</a>
-                        ))}
+                        ))} </DropdownMenu>
                 </div>
                 )}
             

@@ -3,6 +3,7 @@ import PropsPractice2 from "./components/propsPractice2";
 import PropsPractice3 from "./components/propsPractice3";
 import { DropdownContent } from "./components/dropdownContent";
 
+
 export default function App() {
 
 const info = [
