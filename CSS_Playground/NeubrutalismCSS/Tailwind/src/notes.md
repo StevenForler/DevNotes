@@ -1,3 +1,7 @@
+# these are generated will look
+
+1️⃣ Thinking in Tailwind (important mindset shift)
+
 Vanilla CSS:
 
 You define styles once and reuse selectors

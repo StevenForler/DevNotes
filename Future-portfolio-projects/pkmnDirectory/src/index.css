@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @theme {
     --shadow-meow:  10px 10px 0px -1px #2e1c80;
