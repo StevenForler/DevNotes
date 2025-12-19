@@ -1,4 +1,4 @@
-import PropsPractice1 from "./components/propsPractice1"
+import MainDropdown from "./components/mainDropdown";
 import PropsPractice2 from "./components/propsPractice2";
 import PropsPractice3 from "./components/propsPractice3";
 import { DropdownContent } from "./components/dropdownContent";
@@ -18,7 +18,7 @@ return (// get background color to stretch full view height of screen
                 <PropsPractice2 />
                 <PropsPractice3 />
         {info.map(button => ( 
-                <PropsPractice1 
+                <MainDropdown
                 buttonPackage={button}/>
                 ))}
         </div>
