@@ -9,14 +9,14 @@ const {id, text, color, content} = buttonPackage
         <div className="flex flex-col">
             
             <div role='button' key={id} onClick={() => setIsOpen((prev) => !prev)} 
-                                    className={`mx-auto border-black border-2 ${color} font-bold text-center w-80 sm:w-96 
-                                    shadow-[2px_2px_#32127a] transition-transform hover:-translate-1 active:translate-0`}>
+                                    className={`mx-auto border-black border-2 ${color} font-bold text-center w-40 
+                                    shadow-[2px_2px_#32127a] transition-transform hover:-translate-1 active:translate-0.75`}>
                 {text}
             </div> 
                 {isOpen && (
-                <div className='border-black border-2 rounded-b-lg font-bold shadow-[2px_2px_#32127a] flex flex-col '> 
+                <div className='bg-yellow-200 border-black border-2 rounded-b-lg font-bold shadow-[2px_2px_#32127a] flex flex-col '> 
                 {content.map(item => (
-                        <a className='flex justify-center' key={item}>{item}</a>
+                        <a className='flex justify-center' href='#' key={item}>{item}</a>
                         ))}
                 </div>
                 )}
