@@ -1,6 +1,5 @@
 import MainDropdown from "./components/mainDropdown";
-import PropsPractice2 from "./components/propsPractice2";
-import PropsPractice3 from "./components/propsPractice3";
+import HeaderContent from "./components/headerContent";
 import { DropdownContent } from "./components/dropdownContent";
 
 
@@ -15,8 +14,7 @@ const info = [
 
 return (// get background color to stretch full view height of screen
         <div className="flex flex-col gap-5 justify-center items-center h-screen w-full bg-pink-300">
-                <PropsPractice2 />
-                <PropsPractice3 />
+                <HeaderContent/>
         {info.map(button => ( 
                 <MainDropdown
                 buttonPackage={button}/>
